@@ -19,3 +19,5 @@ void destroy_node(t_node *node)
 	if (node)
 		free(node);
 }
+
+void	node_add_back(t_node )
