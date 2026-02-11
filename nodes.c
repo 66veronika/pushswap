@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   nodes.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/10 23:57:30 by veronikasko       #+#    #+#             */
+/*   Updated: 2026/02/10 23:57:31 by veronikasko      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_node	*newnode(int content)
@@ -13,11 +25,38 @@ t_node	*newnode(int content)
 	new->next = NULL;
 	return (new);
 }
-
+/*
 void destroy_node(t_node *node)
 {
 	if (node)
 		free(node);
-}
+}*/
 
-void	node_add_back(t_node )
+void	node_add_back(t_node **stack, t_node *new)
+{
+	t_node	*current;
+
+	if(!new || !stack)
+		return;
+	if(!*stack)
+		*stack = new;
+	else
+	{
+		current = *stack;
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
+}
+int	stack_size(t_node *stack)
+{
+	int	size;
+
+	size = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		size++;
+	}
+	return (size);
+}

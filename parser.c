@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
+/*   Updated: 2026/02/10 23:57:34 by veronikasko      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_node	*parse_args(int argc, char **argv)
@@ -59,8 +71,26 @@ t_node *parse_args_multi(int argc, char **argv)
 	return (stack);
 }
 
-void	error_exit(void)
+static void	error_exit(void)
 {
 	write(2, "Error\n", 6);
 	exit(1);
+}
+static void	check_duplicates(t_node *stack)
+{
+	t_node	*i;
+	t_node	*j;
+
+	i = stack;
+	while (i)
+	{
+		j = i->next;
+		while (j)
+		{
+			if (i->number == j->number)
+				error_exit();
+			j = j->next;
+		}
+		i = i->next;
+	}
 }
