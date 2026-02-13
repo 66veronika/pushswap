@@ -1,12 +1,27 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	t_node	*node1 = ft_newnode(3);
-	printf("%d\n", node1->number);
+	t_node	*a;
+	t_node	*b;
+	int		size;
 
-	
-	ft_destroy_node(node1);
-
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	a = parse_args(argc, argv);
+	index_stack(a);
+	size = stack_size(a);
+	if (size == 2)
+		sort_two(&a);
+	else if (size == 3)
+		sort_three(&a);
+	else if (!is_sorted(a))
+		radix_sort(&a, &b);
+	free_stack(&a);
+	free_stack(&b);
+	return (0);
 }
+

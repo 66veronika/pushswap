@@ -6,13 +6,13 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:30 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/10 23:57:31 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/12 01:11:05 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*newnode(int content)
+t_node	*new_node(int content)
 {
 	t_node	*new;
 
@@ -47,16 +47,4 @@ void	node_add_back(t_node **stack, t_node *new)
 			current = current->next;
 		current->next = new;
 	}
-}
-int	stack_size(t_node *stack)
-{
-	int	size;
-
-	size = 0;
-	while (stack)
-	{
-		stack = stack->next;
-		size++;
-	}
-	return (size);
 }

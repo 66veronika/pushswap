@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/10 23:57:34 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/13 15:33:42 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ t_node	*parse_args_split(char *arg)
 	stack = NULL;
 	split = ft_split(arg, ' ');
 	if (!split)
-		error_exit();
+	check_empty_split(split);
 	i = 0;
 	while (split[i])
 	{
 		if (!ft_atol(split[i], &num))
-			error_exit();
+			error_exit_simple();
 		node_add_back(&stack, new_node(num));
 		i++;
 	}
@@ -64,18 +64,13 @@ t_node *parse_args_multi(int argc, char **argv)
 	while (i < argc)
 	{
 		if (!ft_atol(argv[i], &num))
-			error_exit();
-		add_back(&stack, new_node(num));
+			error_exit_simple();
+		node_add_back(&stack, new_node(num));
 		i++;
 	}
 	return (stack);
 }
 
-static void	error_exit(void)
-{
-	write(2, "Error\n", 6);
-	exit(1);
-}
 static void	check_duplicates(t_node *stack)
 {
 	t_node	*i;
@@ -88,9 +83,10 @@ static void	check_duplicates(t_node *stack)
 		while (j)
 		{
 			if (i->number == j->number)
-				error_exit();
+				error_exit_simple();
 			j = j->next;
 		}
 		i = i->next;
 	}
 }
+
