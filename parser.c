@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 18:56:11 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/13 19:01:44 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ static void	check_duplicates(t_node *stack)
 		i = i->next;
 	}
 }
-int	ft_atol(char *str, long *num)
+int	ft_atol(char *str, int *num)
 {
 	int		i;
 	int		sign;
@@ -114,7 +114,7 @@ int	ft_atol(char *str, long *num)
 			return (0);
 		i++;
 	}
-	*num = result * sign;
+	*num = (int)(result * sign);
 	return (1);
 }
 
