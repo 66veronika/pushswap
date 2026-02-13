@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:31 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/10 23:57:32 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/13 15:58:58 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	add_index(t_node *stack, int *arr, int size)
 	while (stack)
 	{
 		i = 0;
-		while (i > size)
+		while (i < size)
 		{
 			if (stack->number == arr[i])
 			{
@@ -77,7 +77,7 @@ void index_stack(t_node *stack)
 	size = stack_size(stack);
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
-		error_exit();
+		error_exit_simple();
 	fill_array(arr, stack);
 	sort_array(arr, size);
 	add_index(stack, arr, size);
