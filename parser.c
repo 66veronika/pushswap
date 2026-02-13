@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 15:33:42 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/13 18:56:11 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_node	*parse_args(int argc, char **argv)
 		stack_a = parse_args_split(argv[1]);
 	else
 		stack_a = parse_args_multi(argc, argv);
-	check_dupicates(stack_a);
+	check_duplicates(stack_a);
 	return (stack_a);
 }
 
@@ -88,5 +88,33 @@ static void	check_duplicates(t_node *stack)
 		}
 		i = i->next;
 	}
+}
+int	ft_atol(char *str, long *num)
+{
+	int		i;
+	int		sign;
+	long	result;
+
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] < 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
+			sign *= -1;
+	if (str[i] < '0' || str[i] > '9')
+		return (0);
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		result = result * 10 + (str[i] - '0');
+		if (result * sign > INT_MAX || result * sign < INT_MIN)
+			return (0);
+		i++;
+	}
+	*num = result * sign;
+	return (1);
 }
 

@@ -4,7 +4,19 @@ CFLAGS		= -Wall -Werror -Wextra
 RM 			= rm -rf
 INCLUDES	= -I.
 
-SRCS		= 
+SRCS		= parser.c\
+			  push_swap.c\
+			  operations.c\
+			  sort.c\
+			  stack.c\
+			  nodes.c\
+			  index.c\
+			  ft_split.c\
+			  error.c\
+			  operations/push.c\
+			  operations/swap.c\
+			  operations/rotate.c\
+			  operations/reverse_rotate.c\
 
 
 OBJS		=	$(SRCS:.c=.o)
