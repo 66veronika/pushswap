@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:45 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/12 01:07:12 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 13:17:36 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-static void	check_empty_split(char **split)
+void	check_empty_split(char **split)
 {
 	if (!split || !split[0])
 	{

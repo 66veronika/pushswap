@@ -5,8 +5,6 @@ RM 			= rm -rf
 INCLUDES	= -I.
 
 SRCS		= parser.c\
-			  push_swap.c\
-			  operations.c\
 			  sort.c\
 			  stack.c\
 			  nodes.c\
@@ -17,6 +15,7 @@ SRCS		= parser.c\
 			  operations/swap.c\
 			  operations/rotate.c\
 			  operations/reverse_rotate.c\
+			  main.c\
 
 
 OBJS		=	$(SRCS:.c=.o)
@@ -24,7 +23,7 @@ OBJS		=	$(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

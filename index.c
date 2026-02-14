@@ -6,13 +6,13 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:31 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 15:58:58 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 13:25:41 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_array(int	*arr, t_node *stack)
+static void	fill_array(int	*arr, t_node *stack)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ void	fill_array(int	*arr, t_node *stack)
 	}
 }
 
-void	sort_array(int *arr, int size)
+static void	sort_array(int *arr, int size)
 {
 	int	i;
 	int	j;
@@ -49,7 +49,7 @@ void	sort_array(int *arr, int size)
 	}
 }
 
-void	add_index(t_node *stack, int *arr, int size)
+static void	add_index(t_node *stack, int *arr, int size)
 {
 	int	i;
 

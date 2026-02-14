@@ -6,11 +6,13 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 19:01:44 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 13:20:38 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	check_duplicates(t_node *stack);
 
 t_node	*parse_args(int argc, char **argv)
 {
