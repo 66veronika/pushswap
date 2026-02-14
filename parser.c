@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 17:05:26 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 17:54:06 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,24 @@ t_node	*parse_args_split(char *arg)
 
 	stack = NULL;
 	split = ft_split(arg, ' ');
-	check_empty_split(split);
-	i = 0;
-	while (split[i])
+	if (!split || !split[0])
 	{
-		if (!ft_atol(split[i], &num))
-			error_exit_simple();
-		node_add_back(&stack, new_node(num));
-		i++;
+		free(split);
+		return (NULL);
 	}
 	i = 0;
 	while (split[i])
+	{
+		if (split[i][0] != '\0')
+		{
+			if (!ft_atol(split[i], &num))
+			error_exit_simple();
+		node_add_back(&stack, new_node(num));
+		}
+		i++;
+	}
+	i = 0;
+	while (split && split[i])
 	{
 		free(split[i]);
 		i++;

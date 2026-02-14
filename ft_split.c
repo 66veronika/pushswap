@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:45 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 15:30:46 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 17:49:34 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,13 +94,12 @@ char	**ft_split(char const *s, char c)
 	split[j] = NULL;
 	return (split);
 }
-
+/*
 void	check_empty_split(char **split)
 {
 	if (!split || !split[0])
 	{
 		free(split);
-		error_exit_simple();
 		return ;
 	}
-}
+}*/

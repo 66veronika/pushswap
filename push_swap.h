@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:28 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 14:24:37 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 17:49:50 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	len_check(char *str);
 
 void index_stack(t_node *stack);
 char	**ft_split(char const *s, char c);
-void	check_empty_split(char **split);
+//void	check_empty_split(char **split);
 
 int	max_bits(t_node *stack);
 void	radix_sort(t_node **a, t_node **b);

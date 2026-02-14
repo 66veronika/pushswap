@@ -12,6 +12,8 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	a = parse_args(argc, argv);
+	if (!a)
+    	return (0);
 	index_stack(a);
 	size = stack_size(a);
 	if (size == 2)
