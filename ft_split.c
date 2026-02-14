@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:45 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 13:17:36 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 15:30:46 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	word_count(char const *s, char c)
 }
 
 
-static void	free_split(char **split, int j)
+void	free_split(char **split, int j)
 {
 	while (j > 0)
 	{
@@ -104,24 +104,3 @@ void	check_empty_split(char **split)
 		return ;
 	}
 }
-
-
-/*
-int	main(void)
-{
-	char	**split = ft_split("Hello world hi!", ' ');
-	int		i = 0;
-	while (split[i])
-	{
-		printf("%s\n", split[i]);
-		i++;
-	}
-	i = 0;
-    while (split[i])
-    {
-        free(split[i]);
-        i++;
-    }
-    free(split);
-	return (0);
-}*/

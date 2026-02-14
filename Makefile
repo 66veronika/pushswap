@@ -10,6 +10,7 @@ SRCS		= parser.c\
 			  nodes.c\
 			  index.c\
 			  ft_split.c\
+			  ft_atol.c\
 			  error.c\
 			  operations/push.c\
 			  operations/swap.c\
