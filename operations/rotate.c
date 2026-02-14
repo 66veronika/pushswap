@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:45:09 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/11 20:53:07 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:27:42 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

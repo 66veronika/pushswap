@@ -6,13 +6,14 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 17:54:06 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:29:32 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	check_duplicates(t_node *stack);
+static void	free_split_safe(char **split);
 
 t_node	*parse_args(int argc, char **argv)
 {
@@ -30,38 +31,33 @@ t_node	*parse_args(int argc, char **argv)
 t_node	*parse_args_split(char *arg)
 {
 	char	**split;
-	int		i;
-	long	num;
 	t_node	*stack;
+	long	num;
+	int		i;
 
 	stack = NULL;
 	split = ft_split(arg, ' ');
 	if (!split || !split[0])
 	{
-		free(split);
+		free_split_safe(split);
 		return (NULL);
 	}
 	i = 0;
 	while (split[i])
 	{
-		if (split[i][0] != '\0')
+		if (!ft_atol(split[i], &num))
 		{
-			if (!ft_atol(split[i], &num))
+			free_split_safe(split);
 			error_exit_simple();
-		node_add_back(&stack, new_node(num));
 		}
+		node_add_back(&stack, new_node(num));
 		i++;
 	}
-	i = 0;
-	while (split && split[i])
-	{
-		free(split[i]);
-		i++;
-	}
-	free(split);
+	free_split_safe(split);
 	return (stack);
 }
-t_node *parse_args_multi(int argc, char **argv)
+
+t_node	*parse_args_multi(int argc, char **argv)
 {
 	t_node	*stack;
 	int		i;
@@ -96,4 +92,19 @@ static void	check_duplicates(t_node *stack)
 		}
 		i = i->next;
 	}
+}
+
+static void	free_split_safe(char **split)
+{
+	int	i;
+
+	if (!split)
+		return ;
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/14 18:27:05 by vskopova          #+#    #+#             */
+/*   Updated: 2026/02/14 18:32:36 by vskopova         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include <stdio.h>
 
@@ -13,7 +25,7 @@ int	main(int argc, char **argv)
 		return (0);
 	a = parse_args(argc, argv);
 	if (!a)
-    	return (0);
+		return (0);
 	index_stack(a);
 	size = stack_size(a);
 	if (size == 2)
@@ -26,4 +38,3 @@ int	main(int argc, char **argv)
 	free_stack(&b);
 	return (0);
 }
-

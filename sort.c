@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:34 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 15:02:19 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:31:20 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void	sort_two(t_node **a)
 	if ((*a)->index > (*a)->next->index)
 		sa(a);
 }
+
 void	sort_three(t_node **a)
 {
 	int	first;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 00:40:13 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 15:24:03 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:26:42 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,3 @@ void	error_exit(t_node **a, t_node **b)
 	write(2, "Error\n", 6);
 	exit(1);
 }
-
-
-
-

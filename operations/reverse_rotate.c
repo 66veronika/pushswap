@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:45:11 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/11 22:36:30 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:27:47 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

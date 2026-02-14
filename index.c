@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:31 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 13:25:41 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:30:59 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	fill_array(int	*arr, t_node *stack)
 	int	i;
 
 	i = 0;
-	while(stack)
+	while (stack)
 	{
 		arr[i] = stack->number;
 		i++;
@@ -61,7 +61,7 @@ static void	add_index(t_node *stack, int *arr, int size)
 			if (stack->number == arr[i])
 			{
 				stack->index = i;
-				break;
+				break ;
 			}
 			i++;
 		}
@@ -69,7 +69,7 @@ static void	add_index(t_node *stack, int *arr, int size)
 	}
 }
 
-void index_stack(t_node *stack)
+void	index_stack(t_node *stack)
 {
 	int	size;
 	int	*arr;
@@ -81,7 +81,5 @@ void index_stack(t_node *stack)
 	fill_array(arr, stack);
 	sort_array(arr, size);
 	add_index(stack, arr, size);
-
 	free(arr);
 }
-

@@ -6,13 +6,13 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:45 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 17:49:34 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/14 18:29:57 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	word_count(char const *s, char c)
+static int	word_count(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -23,7 +23,7 @@ static int	word_count(char const *s, char c)
 	in_word = 0;
 	while (s[i])
 	{
-		if (s[i] != c && in_word == 0)
+		if (s[i] != c && !in_word)
 		{
 			count++;
 			in_word = 1;
@@ -35,7 +35,6 @@ static int	word_count(char const *s, char c)
 	return (count);
 }
 
-
 void	free_split(char **split, int j)
 {
 	while (j > 0)
@@ -46,7 +45,7 @@ void	free_split(char **split, int j)
 	free(split);
 }
 
-static char	*get_word(char const *s, char c, int *i)
+static char	*get_word(const char *s, char c, int *i)
 {
 	int		start;
 	int		len;
@@ -61,6 +60,8 @@ static char	*get_word(char const *s, char c, int *i)
 		(*i)++;
 		len++;
 	}
+	if (len == 0)
+		return (NULL);
 	word = malloc(len + 1);
 	if (!word)
 		return (NULL);
@@ -71,11 +72,12 @@ static char	*get_word(char const *s, char c, int *i)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**split;
 	int		i;
 	int		j;
+	char	*word;
 
 	if (!s)
 		return (NULL);
@@ -86,10 +88,9 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		split[j] = get_word(s, c, &i);
-		if (!split[j])
-			return (free_split(split, j), NULL);
-		j++;
+		word = get_word(s, c, &i);
+		if (word)
+			split[j++] = word;
 	}
 	split[j] = NULL;
 	return (split);

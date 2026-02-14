@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:14:38 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/11 22:28:46 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:27:36 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sa(t_node **a)
 {
 	t_node	*first;
 	t_node	*second;
-	
+
 	if (!a || !*a || !(*a)->next)
 		return ;
 	first = *a;

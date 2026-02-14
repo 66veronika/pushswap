@@ -3,38 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 14:14:09 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 17:05:48 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:30:15 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-static int	str_len(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int	len_check(char *str)
-{
-	int	len;
-	long	num;
-
-	ft_atol(str, &num);
-	len = str_len(str);
-	if (len > 11)
-		return 0;
-	return (1);
-}*/
-
 
 int	ft_atol(char *str, long *num)
 {

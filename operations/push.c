@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:45:16 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/11 20:50:36 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/14 18:27:52 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
