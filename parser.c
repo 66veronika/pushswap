@@ -6,7 +6,7 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 18:29:32 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/15 18:37:12 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_node	*parse_args_split(char *arg)
 		if (!ft_atol(split[i], &num))
 		{
 			free_split_safe(split);
-			error_exit_simple();
+			error_exit_simple(&stack); // not freeing is case of issue
 		}
 		node_add_back(&stack, new_node(num));
 		i++;
@@ -68,7 +68,7 @@ t_node	*parse_args_multi(int argc, char **argv)
 	while (i < argc)
 	{
 		if (!ft_atol(argv[i], &num))
-			error_exit_simple();
+			error_exit_simple(&stack);
 		node_add_back(&stack, new_node(num));
 		i++;
 	}
@@ -87,7 +87,7 @@ static void	check_duplicates(t_node *stack)
 		while (j)
 		{
 			if (i->number == j->number)
-				error_exit_simple();
+				error_exit_simple(&stack);
 			j = j->next;
 		}
 		i = i->next;

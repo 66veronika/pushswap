@@ -6,7 +6,7 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:28 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 18:28:48 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/15 18:36:18 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		is_sorted(t_node *stack);
 void	sort_two(t_node **a);
 void	sort_three(t_node **a);
 
-void	error_exit_simple(void);
+void	error_exit_simple(t_node **stack);
 void	error_exit(t_node **a, t_node **b);
 
 t_node	*new_node(int content);

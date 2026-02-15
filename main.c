@@ -6,7 +6,7 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 18:27:05 by vskopova          #+#    #+#             */
-/*   Updated: 2026/02/14 18:32:36 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/15 19:54:26 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	main(int argc, char **argv)
 		return (0);
 	index_stack(a);
 	size = stack_size(a);
-	if (size == 2)
+	if (size == 2 && !is_sorted(a))
 		sort_two(&a);
-	else if (size == 3)
+	else if (size == 3 && !is_sorted(a))
 		sort_three(&a);
 	else if (!is_sorted(a))
 		radix_sort(&a, &b);
