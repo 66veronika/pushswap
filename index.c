@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:31 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/15 18:36:56 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/16 12:02:08 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	index_stack(t_node *stack)
 	size = stack_size(stack);
 	arr = malloc(sizeof(int) * size);
 	if (!arr)
-		error_exit_simple(&stack);
+		error_exit(&stack);
 	fill_array(arr, stack);
 	sort_array(arr, size);
 	add_index(stack, arr, size);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   nodes.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:30 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 18:32:20 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/16 10:43:54 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ t_node	*new_node(int content)
 
 	new = (t_node *)malloc(sizeof(t_node));
 	if (!new)
-		return (NULL);
+	{
+		write(2, "Error\n", 6);
+		exit(1);
+	}
 	new->number = content;
 	new->index = 0;
 	new->next = NULL;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:34 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/15 19:56:32 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/16 11:53:25 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
