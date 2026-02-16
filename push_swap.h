@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:28 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/16 12:01:34 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/16 15:57:26 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_node	*parse_args(int argc, char **argv);
 t_node	*parse_args_split(char *arg);
 t_node	*parse_args_multi(int argc, char **argv);
 int		ft_atol(char *str, long *num);
-int		len_check(char *str);
 
 void	index_stack(t_node *stack);
 char	**ft_split(char const *s, char c);

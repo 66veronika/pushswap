@@ -6,7 +6,7 @@
 /*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:45 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/14 18:29:57 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/16 16:07:48 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,6 @@ static int	word_count(const char *s, char c)
 		i++;
 	}
 	return (count);
-}
-
-void	free_split(char **split, int j)
-{
-	while (j > 0)
-	{
-		j--;
-		free(split[j]);
-	}
-	free(split);
 }
 
 static char	*get_word(const char *s, char c, int *i)

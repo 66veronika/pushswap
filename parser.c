@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:33 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/16 12:03:11 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/16 16:07:20 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ t_node	*parse_args_split(char *arg)
 		if (!ft_atol(split[i], &num))
 		{
 			free_split_safe(split);
-			error_exit(&stack); // not freeing is case of issue
+			error_exit(&stack);
 		}
 		node_add_back(&stack, new_node(num));
 		i++;
