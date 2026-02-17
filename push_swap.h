@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:28 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/16 15:57:26 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/17 09:52:05 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	radix_sort(t_node **a, t_node **b);
 int		is_sorted(t_node *stack);
 void	sort_two(t_node **a);
 void	sort_three(t_node **a);
+void	minisort(t_node **a, t_node **b);
 
 void	error_exit(t_node **stack);
 

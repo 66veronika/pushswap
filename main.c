@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
+/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/14 18:27:05 by vskopova          #+#    #+#             */
-/*   Updated: 2026/02/15 19:54:26 by vskopova         ###   ########.fr       */
+/*   Updated: 2026/02/17 10:21:47 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,15 @@ int	main(int argc, char **argv)
 		return (0);
 	index_stack(a);
 	size = stack_size(a);
-	if (size == 2 && !is_sorted(a))
+	if (is_sorted(a))
+		return (free_stack(&a), free_stack(&b), 0);
+	else if (size == 2)
 		sort_two(&a);
-	else if (size == 3 && !is_sorted(a))
+	else if (size == 3)
 		sort_three(&a);
-	else if (!is_sorted(a))
+	else if (size <= 5)
+		minisort(&a, &b);
+	else
 		radix_sort(&a, &b);
-	free_stack(&a);
-	free_stack(&b);
-	return (0);
+	return (free_stack(&a), free_stack(&b), 0);
 }

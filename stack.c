@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 00:05:27 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/13 15:38:50 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/17 09:04:43 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	free_stack(t_node **stack)
 {
 	t_node	*temp;
 
+	if (!stack || !*stack)
+		return ;
+		
 	while (*stack)
 	{
 		temp = (*stack)->next;

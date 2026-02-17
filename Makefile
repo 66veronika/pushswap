@@ -12,6 +12,7 @@ SRCS		= parser.c\
 			  ft_split.c\
 			  ft_atol.c\
 			  error.c\
+			  minisort.c\
 			  operations/push.c\
 			  operations/swap.c\
 			  operations/rotate.c\

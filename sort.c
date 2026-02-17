@@ -6,7 +6,7 @@
 /*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:57:34 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/16 11:53:25 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/17 09:40:24 by veronikasko      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,40 +70,4 @@ int	is_sorted(t_node *stack)
 		stack = stack->next;
 	}
 	return (1);
-}
-
-void	sort_two(t_node **a)
-{
-	if (!a || !*a || !(*a)->next)
-		return ;
-	sa(a);
-}
-
-void	sort_three(t_node **a)
-{
-	int	first;
-	int	second;
-	int	third;
-
-	if (!a || !*a || !(*a)->next || !(*a)->next->next)
-		return ;
-	first = (*a)->index;
-	second = (*a)->next->index;
-	third = (*a)->next->next->index;
-	if (first > second && second < third && first < third)
-		sa(a);
-	else if (first > second && second > third)
-	{
-		sa(a);
-		rra(a);
-	}
-	else if (first > second && second < third && first > third)
-		ra(a);
-	else if (first < second && second > third && first < third)
-	{
-		sa(a);
-		ra(a);
-	}
-	else if (first < second && second > third && first > third)
-		rra(a);
 }
