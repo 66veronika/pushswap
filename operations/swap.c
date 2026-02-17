@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 20:14:38 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/17 10:17:37 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/17 19:04:15 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,3 @@ void	sa(t_node **a)
 	*a = second;
 	write(1, "sa\n", 3);
 }
-
-

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 00:05:27 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/17 09:04:43 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/17 19:04:26 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	free_stack(t_node **stack)
 
 	if (!stack || !*stack)
 		return ;
-		
 	while (*stack)
 	{
 		temp = (*stack)->next;
