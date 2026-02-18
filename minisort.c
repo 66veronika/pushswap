@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minisort.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: veronikaskopova <veronikaskopova@studen    +#+  +:+       +#+        */
+/*   By: vskopova <vskopova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 09:40:34 by veronikasko       #+#    #+#             */
-/*   Updated: 2026/02/17 10:18:48 by veronikasko      ###   ########.fr       */
+/*   Updated: 2026/02/18 16:40:29 by vskopova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,6 @@ void	minisort(t_node **a, t_node **b)
 		size = stack_size(*a);
 	}
 	sort_three(a);
-	if (*b && (*b)->next && (*b)->index < (*b)->next->index)
-		sa(b);
 	while (*b)
 		pa(a, b);
 }
