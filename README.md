@@ -60,7 +60,9 @@ Or as a quoted string:
 
 ## RESOURCES
 https://www.reddit.com/r/explainlikeimfive/comments/xuzyre/eli5_how_does_radix_sort_work/
+
 https://www.geeksforgeeks.org/dsa/radix-sort/
+
 https://www.geeksforgeeks.org/c/bitwise-operators-in-c-cpp/
 
 AI Usage
@@ -68,6 +70,8 @@ AI Usage
 Artificial intelligence tools were used during the development of this project in the following ways:
 
 - Debugging memory issues (e.g., invalid free, segmentation faults)
+
+- Assisted with formatting and grammar checking md file 
 
 - Reviewing parsing logic and edge cases
 
